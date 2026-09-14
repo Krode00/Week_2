@@ -1,0 +1,1 @@
+Missing required columns: {'Gender', 'Subject_offered', 'Class', 'Address', 'School_id', 'Semester', 'Name', 'Grade'}
