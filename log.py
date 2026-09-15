@@ -13,4 +13,23 @@ logging.basicConfig(
     filemode='w'  # 'w' resets the log file every run. Use 'a' to keep appending.
 )
 
+ # Rule 2: Check for valid Age (must be integer between 0 and 120)
+                age_val = row.get('Age', '').strip()
+                try:
+                    age_int = int(age_val)
+                    if not (0 <= age_int <= 120):
+                        row_errors.append(f"Age out of range: {age_val}")
+                except ValueError:
+                    row_errors.append(f"Invalid age format (not an integer): '{age_val}'")
+
+
+
+
+
+
+
+
+
+log_csv_errors('data.csv')
+
 
